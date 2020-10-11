@@ -1,0 +1,242 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+p, a {
+    color: #00695C;
+    margin: 10px;
+}
+
+h1, h2 {
+    color: #004D40;
+}
+
+body {
+    background-color: #80CBC4;
+    margin-bottom: 60px; /* Margin bottom by footer height */
+    font-family: 'Roboto', sans-serif;
+}
+
+.svg-wrapper {
+    width: 300px;
+    height: 300px;
+}
+
+.radio-label {
+    background-color: #00897B;
+    width: 100px;
+}
+
+.checkbox-label {
+    background-color: #00897B;
+    width: 70px;
+}
+
+.selected-x {
+    border-radius: 16px;
+    background: #80CBC4;
+    box-shadow: inset 5px 5px 10px #76bbb4,
+    inset -5px -5px 10px #8adbd4 !important;
+}
+
+.neo-select {
+    color: #00897B;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    border-radius: 16px;
+    background: #80CBC4;
+    /*box-shadow:*/
+    /*inset 5px 5px 10px #76bbb4,*/
+    /*inset -5px -5px 10px #8adbd4;*/
+
+    animation-name: extruding-field;
+    animation-delay: 1s;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+
+.neo-select:focus {
+    color: #00897B;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    border-radius: 16px;
+    background: #B2DFDB;
+    box-shadow:  6px 6px 11px #619a95,
+    -6px -6px 11px #9ffcf3,
+    inset 5px 5px 10px #76bbb4,
+    inset -5px -5px 10px #8adbd4;
+}
+
+.neo-submit {
+    color: #00897B;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    width: 200px;
+    height: 45px;
+    border-radius: 16px;
+    background: #80CBC4;
+    /*box-shadow:  6px 6px 11px #619a95,*/
+    /*-6px -6px 11px #9ffcf3,*/
+    /*inset 5px 5px 10px #76bbb4,*/
+    /*inset -5px -5px 10px #8adbd4;*/
+
+    animation-name: extruding-btn;
+    animation-delay: 1.5s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+
+.neo-submit:active {
+    border-radius: 16px;
+    background: #80CBC4;
+    box-shadow: inset 5px 5px 10px #76bbb4,
+    inset -5px -5px 10px #8adbd4;
+}
+
+.neo-btn {
+    color: #00897B;
+    margin: 10px;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    width: 80px;
+    height: 40px;
+    border-radius: 16px;
+    background: #80CBC4;
+    /*box-shadow:  6px 6px 11px #619a95,*/
+    /*-6px -6px 11px #9ffcf3,*/
+    /*inset 5px 5px 10px #76bbb4,*/
+    /*inset -5px -5px 10px #8adbd4;*/
+
+    animation-name: extruding-btn;
+    animation-delay: 1.5s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+
+.neo-btn:active {
+    background-color: #80CBC4;
+    border-radius: 16px;
+    box-shadow: inset 5px 5px 10px #6fb1ab,
+    inset -5px -5px 10px #91e5dd !important;
+}
+
+.neo-btn:focus {
+    border-radius: 16px;
+    background: #80CBC4;
+    box-shadow: inset 5px 5px 10px #76bbb4,
+    inset -5px -5px 10px #8adbd4;
+}
+
+button:active, button:focus {
+    outline: none !important;
+}
+button::-moz-focus-inner {
+    border: 0 !important;
+}
+
+.table-wrapper {
+    height: 350px; /* высота нашего блока */
+    width: 100%; /* ширина нашего блока */
+    overflow-y: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.graphic-box {
+    padding: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    padding-left: 85px;
+    /*animation-name: extruding-graphic-box;*/
+    /*animation-duration: 1s;*/
+    /*animation-fill-mode: forwards;*/
+    /*animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);*/
+}
+
+header {
+    background-color: #4DB6AC;
+    margin-bottom: 30px;
+    opacity: 0;
+    /*box-shadow:  6px 6px 11px #43a198,*/
+    /*-6px -6px 11px #9ffcf3;*/
+
+    animation-name: extruding-header;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+
+footer {
+    opacity: 0;
+    background-color: #4DB6AC;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px; /* Set the fixed height of the footer here */
+    line-height: 60px; /* Vertically center the text there */
+    /*box-shadow:  6px 6px 11px #9ffcf3,*/
+    /*-6px -6px 20px #92e6de;*/
+
+    animation-name: extruding-footer;
+    animation-delay: 0.5s;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+
+@keyframes extruding-btn {
+    100% {
+        box-shadow:  6px 6px 11px #619a95,
+        -6px -6px 11px #9ffcf3,
+        inset 5px 5px 10px #76bbb4,
+        inset -5px -5px 10px #8adbd4;
+    }
+}
+
+@keyframes extruding-field {
+    100% {
+        box-shadow:
+                inset 5px 5px 10px #76bbb4,
+                inset -5px -5px 10px #8adbd4;
+        background: #B2DFDB;
+    }
+}
+
+@keyframes extruding-graphic-box {
+    0 % {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        box-shadow:
+                inset 5px 5px 10px #76bbb4,
+                inset -5px -5px 10px #8adbd4;
+        background: #B2DFDB;
+    }
+}
+
+@keyframes extruding-header {
+    100% {
+        opacity: 1;
+        box-shadow:  6px 6px 11px #43a198,
+        -6px -6px 11px #9ffcf3;
+    }
+}
+
+@keyframes extruding-footer {
+    100% {
+        opacity: 1;
+        box-shadow:  6px 6px 11px #9ffcf3,
+        -6px -6px 20px #92e6de;
+    }
+}
